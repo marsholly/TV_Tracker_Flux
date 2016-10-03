@@ -16,9 +16,9 @@ class FavoriteTVStore extends EventEmitter {
           this.emit('CHANGE');
           break;
         case 'REMOVE_TV':
-          let { id } = action.payload;
+          let { _id } = action.payload;
           let newFavoriteTVs = _tv.filter(t => {
-            return t.id = id;
+            return t._id !== _id;
           });
           _tv = newFavoriteTVs;
           this.emit('CHANGE');
