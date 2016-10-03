@@ -16,20 +16,21 @@ export default class ViewTVList extends Component {
 
   render() {
     return (
-      <div className="row">
-        <h2 className="text-center">Search TV</h2>
-        <div className="text-center">
-          <form className="navbar-form" role="search" onSubmit={this.searchTV}>
-            <div className="form-group">
-              <input type="text" className="form-control" placeholder="TV Name" ref="names" />
-            </div>
-            <button type="submit" className="btn btn-default">Search</button>
-          </form>
-          <div className="row">
-            <TVSearchList />
+      <div className="container">
+        <div className="row">
+          <h2 className="text-center">Search TV</h2>
+          <div className="text-center">
+            <form className="navbar-form" role="search" onSubmit={this.searchTV}>
+              <div className="form-group">
+                <input type="text" className="form-control" placeholder="TV Name" ref="names" />
+              </div>
+              <button type="submit" className="btn btn-default">Search</button>
+            </form>
           </div>
+          <TVSearchList />
         </div>
       </div>
+
     )
   }
 };
