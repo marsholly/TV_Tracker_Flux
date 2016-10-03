@@ -8,10 +8,10 @@ const TVActions = {
   singleSearchByName(name) {
     API.singleSearchByName(name)
   },
-  removeTV(id) {
+  removeTV(_id) {
     AppDispatcher.dispatch({
       type: 'REMOVE_TV',
-      payload: { id }
+      payload: { _id }
     })
   }
 }

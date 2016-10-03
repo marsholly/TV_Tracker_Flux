@@ -26,8 +26,8 @@ export default class FavoriteTVList extends Component {
     this.setState({ tv: FavoriteTVStore.getFavoriteTV() })
   }
 
-  unFavorite(id) {
-    TVActions.removeTV(id);
+  unFavorite(_id) {
+    TVActions.removeTV(_id);
   }
 
   render() {
