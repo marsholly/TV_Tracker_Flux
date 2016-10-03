@@ -1,5 +1,6 @@
 import ServerActions from './actions/ServerActions';
 import {get} from 'axios';
+import uuid from 'uuid';
 
 const API = {
   searchByName(name) {
@@ -13,9 +14,10 @@ const API = {
     get(`http://api.tvmaze.com/singlesearch/shows?q=${name}`)
       .then(res => {
         let tv = res.data;
+        tv._id = uuid();
         ServerActions.receiveOneTV(tv);
       })
-  }
+  },
 }
 
 export default API;
