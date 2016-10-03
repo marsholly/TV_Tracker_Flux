@@ -11,6 +11,12 @@ module.exports = {
     publicPath: 'build/',
     filename: 'bundle.js'
   },
+  devServer: {
+    progress: true,
+    inline: true,
+    historyApiFallback: true,
+    port: 8000
+  },
   devtool: 'inline-source-map',
   module: {
     loaders: [
